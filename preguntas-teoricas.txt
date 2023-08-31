@@ -1,0 +1,34 @@
+//Parte 1
+
+* ¿Cuál es el beneficio de usar un lenguaje con tipos (Typescript)?
+El beneficio de usar Typescript es que en el mismo se utiliza tipado estático, quiere decir que se deben declarar las variables y los métodos con sus respectivos tipos, como por ejemplo string, number, boolean,etc. Esto mismo, permite que se puedan detectar los errores al momento del desarrollo de los programas, lo que genera mayor seguridad.
+
+* ¿A que se le llama variable interna?¿Por qué internas?
+Existen dos tipos de variables internas: Las que se almacenan dentro de las clases y las que se declaran dentro de una función.
+Son internas porque en el caso de las que se almacenan dentro de las clases no se deberian poder acceder y/o modificar, por lo tanto no es recomendables que sean "public" ya que cualquiera puede acceder desde cualquier parte del código. Si la variable se especifico como "private" solo se podra modificar dentro de la clase. Tambien existe otro tipo de modificador de acceso llamado "protected", en este caso la variable tampoco sera accesible fuera clase, pero si podrá ser heredada y utilizada por las clases hijas. Estos conceptos hacen referencia al encapsulamiento.
+
+* Explicar la diferencia entre composición y herencia.
+La herencia se utiliza para que una clase hija herede propiedades y métodos de su clase padre, permitiendo que puedan reescribir su código y agregar cosas nuevas. 
+La composición es cuando a partir de una clase, creamos otra clase mas sencilla con funcionalidades similares.
+
+* Explicar el mecanismo que provee Typescript para manejar casos en donde los parámetros que le llegan a un método son inválidos.
+Typescript tiene un mecanismo en el cual si se le pasa un parámetro que no es válido como por ejemplo si declaramos una variable de tipo "number" y luego pasamos una de tipo "string" este mismo marca un error en el código, si no se soluciona, al momento de querer compilar, dicho código no se ejecuta. 
+
+
+//Parte 2
+
+⚫︎ ¿Que pasa cuando se corre el comando "tsc"?
+Al correr el comando tsc los archivos tyspescript se transpilan a javascript. Es necesario realizar esta conversión porque los navegadores web no interpretan ni ejecutan typscript.
+
+⚫︎ ¿Como esta organizada una clase?	
+Una clase se compone principalmente de "variables", las cuales seran los atributos de las mismas. Luego sigue el "constructor" el cual permite crear un objeto a partir de los parámetros que se le pase. Seguido del mismo nos encontramos con los "métodos" los cuales deben ser públicos para que se puedan acceder desde fuera de la clase. Para finalizar se "instancian" las clases, es decir que se crean los objetos de las mismas y se "imprimen" llamando al método. 
+
+⚫︎ ¿Es correcto que un método auxiliar de una clase sea público? ¿Por qué?
+No, no es correcto que un método auxiliar de una clase sea público porque deben ser declarado como "private" si solo queremos que se pueda acceder/modificar dentro de la clase, también se puede utilizar "protected" para que puedan acceder/modificarlas las clases hijas. 
+
+⚫︎ Enumera las caracteristicas de una interfaz.
+
+1- Pueden verse como "contratos" que las clases deben cumplir, en caso de no hacerlo tsc no compila.
+2- Solo permite que se definan métodos, los cuales tienen que ser implementados si o si por la clase.
+3- Los métodos deben ser públicos.
+ 
