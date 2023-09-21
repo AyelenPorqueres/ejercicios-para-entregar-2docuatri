@@ -1,0 +1,17 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var cuenta_1 = require("./cuenta");
+var titular1 = new cuenta_1.Cuenta("Ayelen Porqueres", 120000);
+var titular2 = new cuenta_1.Cuenta("Lorena Planes", 140000);
+console.log("--------TITULAR UNO--------");
+titular1.mostrar();
+titular1.ingresarMonto(15000);
+titular1.mostrar();
+titular1.retirarMonto(5000);
+titular1.mostrar();
+console.log("--------TITULAR DOS--------");
+titular2.mostrar();
+titular2.ingresarMonto(7000);
+titular2.mostrar();
+titular2.retirarMonto(20000);
+titular2.mostrar();

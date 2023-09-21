@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var gato_1 = require("./gato");
+var perro_1 = require("./perro");
+var pajaro_1 = require("./pajaro");
+//Se instancian las subclases Gato, Perro, y Pajaro pasando por parámetro los atributos requeridos, luego se llaman a los métodos de cada una y se muestran en consola.
+var gato1 = new gato_1.Gato("Arturo", 1, "Bombay", "Negro azabache");
+var perro1 = new perro_1.Perro("Lena", 4, "Beagle", "Mediano");
+var pajaro1 = new pajaro_1.Pajaro("Piolin", 2, "Canario", "Pico corto");
+console.log("---------GATO----------");
+gato1.hacerSonido();
+gato1.moverse();
+gato1.jugarConJuguete("Raton a cuerda");
+gato1.mostrarGato();
+console.log("---------PERRO----------");
+perro1.hacerSonido();
+perro1.moverse();
+perro1.buscarObjeto("Pelota");
+perro1.mostrarPerro();
+console.log("---------PÁJARO----------");
+pajaro1.hacerSonido();
+pajaro1.moverse();
+pajaro1.volar("volar");
+pajaro1.mostrarPajaro();
